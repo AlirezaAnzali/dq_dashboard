@@ -1,0 +1,54 @@
+.overview-rates {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.dashboard-filters.filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) repeat(3, minmax(0, 1fr));
+}
+.dashboard-filters.filters label { min-width: 0; }
+.dashboard-filters.filters select { width: 100%; min-width: 0; }
+.overview-rate { text-align: center; }
+.overview-rate .kpi-value { margin-bottom: 0; }
+.overview-exception-summary .overview-warning span, .overview-exception-summary .overview-warning strong { color: #a82434; }
+@media (max-width: 900px) {
+  .dashboard-filters.filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-filters .overview-table-filter { grid-column: 1 / -1; }
+}
+.overview-note { margin: 0 0 6px; font-size: 12px; color: #536b87; }
+.overview .overview-breaches { min-width: 640px; }
+.overview td { font-variant-numeric: tabular-nums; }
+.overview tbody th { background: white; border-bottom: 1px solid #e7edf5; color: #124981; }
+.overview .overview-record { color: #2155a4; font-weight: 800; }
+.overview .overview-amount { color: #087c77; font-weight: 800; }
+.overview-exception-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.overview-exception-summary > div {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid #dfe9f5;
+  border-radius: 8px;
+  background: #f8fbff;
+}
+.overview-exception-summary span, .overview-exception-summary small { color: #496582; font-size: 12px; }
+.overview-exception-summary strong { font-size: 21px; }
+@media (max-width: 600px) {
+  .overview-rates, .overview-exception-summary { grid-template-columns: minmax(0, 1fr); }
+}
+.overview-exception-cde { font-size: 13px; color: #124981; }
+.overview-warning-rate { color: #a82434; }
+.overview-exception-summary > .overview-threshold-count { grid-template-rows: auto 1fr auto auto; align-content: stretch; }
+
+.overview-threshold-count strong { grid-row: 3; }
+.overview-threshold-count small { grid-row: 4; }
+@media (max-width: 420px) {
+  .dashboard-filters.filters { grid-template-columns: minmax(0, 1fr); }
+}
